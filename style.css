@@ -718,17 +718,20 @@ body {
 /* ==========================================
    MOBILE RESPONSIVE FIX (FOR PHONE)
    ========================================== */
+/* ==========================================
+   MOBILE RESPONSIVE COMPLETE FIX (Max-Width: 768px)
+   ========================================== */
 
 @media (max-width: 768px) {
 
-  /* 1. Navigation Bar ကို သန့်ရှင်းစွာ အပေါ်မှာ တန်းပေးရန် */
+  /* 1. TOP NAVIGATION BAR FIX */
   .sidebar {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
     height: 60px !important;
-    flex-direction: row !important; /* အလျားလိုက်ထားမည် */
+    flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
     padding: 0 15px !important;
@@ -738,165 +741,71 @@ body {
     z-index: 1000 !important;
   }
 
-  /* 2. Menu Links များကို Horizontal Scroll လုပ်လို့ရအောင် ပြင်ခြင်း */
+  /* 2. HORIZONTAL SCROLLABLE MENU LINKS */
   .nav-links, .sidebar-menu {
     display: flex !important;
-    flex-direction: row !important; /* စာသားများကို သာမန်အတိုင်း အလျားလိုက်ထားမည် */
+    flex-direction: row !important;
     gap: 12px !important;
     margin: 0 !important;
     padding: 0 10px !important;
-    overflow-x: auto !important; /* စာသားမဆံ့ပါက ဘေးကို ပွတ်ဆွဲ (Scroll) လို့ရမည် */
-    white-space: nowrap !important; /* စာသားမခေါက်သွားစေရန် */
+    overflow-x: auto !important;
+    white-space: nowrap !important;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Scrollbar ကို ဖျောက်ထားရန် */
+  /* Hide Scrollbar for Cleaner UI */
   .nav-links::-webkit-scrollbar,
   .sidebar-menu::-webkit-scrollbar {
     display: none;
   }
 
   .nav-links a, .sidebar-menu a {
-    writing-mode: horizontal-tb !important; /* စာသားလည်နေပါက ပုံမှန်အတိုင်း ပြန်ပြင်ရန် */
+    writing-mode: horizontal-tb !important;
     transform: none !important;
     font-size: 0.85rem !important;
     padding: 6px 10px !important;
   }
 
-  /* 3. Main Content Margin & Padding ညှိရန် */
+  /* 3. MAIN CONTENT MARGIN & PADDING ADJUSTMENT */
   .main-content {
     margin-left: 0 !important;
     width: 100% !important;
-    padding-top: 80px !important;
+    padding-top: 80px !important; /* Top Nav အောက်မဝင်သွားစေရန် */
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
 
-  /* 4. Services Grid ကို ဖုန်းပေါ်တွင် ၁ ကွက်တည်း ဒေါင်လိုက် ဆင်းပေးရန် */
-  .services-container, 
-  .portfolio-container {
-    grid-template-columns: 1fr !important; /* ၂ ကွက်ယှဉ်နေရာမှ ၁ ကွက်တည်းပြောင်းမည် */
-    gap: 20px !important;
-  }
-}
-
-@media (max-width: 768px) {
-
-  /* 1. Counter/Stats Boxes (+70, +50, +07, +15) ကို ဖုန်းမှာ အောက်ဘက် ၂ ကွက် သို့မဟုတ် ၁ ကွက်စီ ဆင်းစေရန် */
+  /* 4. ABOUT STATS / COUNTERS GRID (+70, +50, +07, +15) */
   .about-stats, 
   .counter-container, 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr) !important; /* ဖုန်းပေါ်တွင် ၂ ကွက်စီ ညီညီညာညာပြမည် */
-    /* ၁ ကွက်တည်း ဒေါင်လိုက်ဆင်းချင်ပါက grid-template-columns: 1fr !important; သုံးနိုင်ပါသည် */
+    grid-template-columns: repeat(2, 1fr) !important; /* ဖုန်းတွင် ၂ ကွက်စီညီညီညာညာပြမည် */
     gap: 15px !important;
   }
 
-  /* 2. Experience နဲ့ Education Box ကို ဘေးယှဉ်နေရာမှ အောက်ဘက်သို့ သီးသန့်ဆင်းစေရန် */
+  /* 5. EXPERIENCE & EDUCATION GRID (SINGLE COLUMN) */
   .resume-container, 
   .education-experience-grid {
+    grid-template-columns: 1fr !important; /* အပေါ်အောက် ၁ ကွက်တည်းဆင်းမည် */
+    gap: 25px !important;
+  }
+
+  /* 6. SERVICES & PORTFOLIO GRIDS (SINGLE COLUMN) */
+  .services-container, 
+  .portfolio-container {
     grid-template-columns: 1fr !important; /* ၁ ကွက်တည်း ဒေါင်လိုက်ဆင်းမည် */
-    gap: 25px !important;
+    gap: 20px !important;
   }
 
-  /* 3. Contact Info နဲ့ Map Box / Contact Form ကို အောက်ဘက် သီးသန့်ဆင်းစေရန် */
-  .contact-container {
-    grid-template-columns: 1fr !important; /* ဘေးချင်းယှဉ်မပြဘဲ အောက်ဘက်သို့ ဆင်းမည် */
-    gap: 25px !important;
-  }
-
-  .map-box, 
-  .contact-map iframe {
-    width: 100% !important; /* Map ကို ဖုန်းအပြည့် ပြပေးမည် */
-    height: 250px !important;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  /* 1. Contact Section Layout ကို ၁ ကွက်တည်း ဒေါင်လိုက် ဆင်းစေရန် */
+  /* 7. CONTACT SECTION LAYOUT FIX (INFO CARDS & MAP/FORM) */
   .contact-container {
     display: flex !important;
-    flex-direction: column !important; /* အပေါ်အောက် တန်းစီမည် */
+    flex-direction: column !important; /* Contact Info နှင့် Map/Form အပေါ်အောက်တန်းစီမည် */
     gap: 25px !important;
     width: 100% !important;
   }
 
-  /* 2. Left Side Info Cards (Location, Email, Phone, Skype) များကို ၁ ကွက်စီ အပြည့်ပြရန် */
-  .contact-info {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 15px !important;
-  }
-
-  .contact-card {
-    width: 100% !important;
-    padding: 18px 20px !important;
-  }
-
-  /* 3. Right Side Map / Form Box ကို Contact Info အောက် ရောက်အောင် ပို့ပေးရန် */
-  .contact-form-box,
-  .map-box,
-  .contact-map {
-    width: 100% !important;
-    margin-top: 10px !important;
-  }
-
-  .map-box iframe,
-  .contact-map iframe {
-    width: 100% !important;
-    height: 280px !important; /* Map အမြင့်ကို ဖုန်းအတွက် သင့်တော်အောင် ညှိခြင်း */
-    border-radius: 12px !important;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  /* Contact Info Container ကို ၁ ကွက်တည်း အောက်ဆင်းစေရန် */
-  .contact-info {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 15px !important;
-    width: 100% !important;
-  }
-
-  /* Location, Email, Phone, Skype ကဒ်တစ်ခုစီကို Full Width ပြုလုပ်ခြင်း */
-  .contact-card {
-    width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 15px !important;
-    padding: 16px 20px !important;
-    background-color: var(--card-bg, #f8f9fa) !important;
-    border-radius: 12px !important;
-  }
-
-  /* Icon Size & Alignment ညှိခြင်း */
-  .contact-icon {
-    width: 45px !important;
-    height: 45px !important;
-    min-width: 45px !important; /* Icon မပြားသွားစေရန် */
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  /* စာသားများ ညီညာစေရန် */
-  .card-details h4 {
-    font-size: 0.95rem !important;
-    margin-bottom: 2px !important;
-  }
-
-  .card-details p {
-    font-size: 0.85rem !important;
-    word-break: break-word !important; /* စာသားမထွက်သွားစေရန် */
-  }
-
-}
-
+  /* CONTACT
 
 
 
