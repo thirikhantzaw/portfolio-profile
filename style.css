@@ -780,6 +780,38 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+
+  /* 1. Counter/Stats Boxes (+70, +50, +07, +15) ကို ဖုန်းမှာ အောက်ဘက် ၂ ကွက် သို့မဟုတ် ၁ ကွက်စီ ဆင်းစေရန် */
+  .about-stats, 
+  .counter-container, 
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* ဖုန်းပေါ်တွင် ၂ ကွက်စီ ညီညီညာညာပြမည် */
+    /* ၁ ကွက်တည်း ဒေါင်လိုက်ဆင်းချင်ပါက grid-template-columns: 1fr !important; သုံးနိုင်ပါသည် */
+    gap: 15px !important;
+  }
+
+  /* 2. Experience နဲ့ Education Box ကို ဘေးယှဉ်နေရာမှ အောက်ဘက်သို့ သီးသန့်ဆင်းစေရန် */
+  .resume-container, 
+  .education-experience-grid {
+    grid-template-columns: 1fr !important; /* ၁ ကွက်တည်း ဒေါင်လိုက်ဆင်းမည် */
+    gap: 25px !important;
+  }
+
+  /* 3. Contact Info နဲ့ Map Box / Contact Form ကို အောက်ဘက် သီးသန့်ဆင်းစေရန် */
+  .contact-container {
+    grid-template-columns: 1fr !important; /* ဘေးချင်းယှဉ်မပြဘဲ အောက်ဘက်သို့ ဆင်းမည် */
+    gap: 25px !important;
+  }
+
+  .map-box, 
+  .contact-map iframe {
+    width: 100% !important; /* Map ကို ဖုန်းအပြည့် ပြပေးမည် */
+    height: 250px !important;
+  }
+
+}
+
 
 
 
