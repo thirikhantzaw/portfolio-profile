@@ -812,6 +812,46 @@ body {
 
 }
 
+@media (max-width: 768px) {
+
+  /* 1. Contact Section Layout ကို ၁ ကွက်တည်း ဒေါင်လိုက် ဆင်းစေရန် */
+  .contact-container {
+    display: flex !important;
+    flex-direction: column !important; /* အပေါ်အောက် တန်းစီမည် */
+    gap: 25px !important;
+    width: 100% !important;
+  }
+
+  /* 2. Left Side Info Cards (Location, Email, Phone, Skype) များကို ၁ ကွက်စီ အပြည့်ပြရန် */
+  .contact-info {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .contact-card {
+    width: 100% !important;
+    padding: 18px 20px !important;
+  }
+
+  /* 3. Right Side Map / Form Box ကို Contact Info အောက် ရောက်အောင် ပို့ပေးရန် */
+  .contact-form-box,
+  .map-box,
+  .contact-map {
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  .map-box iframe,
+  .contact-map iframe {
+    width: 100% !important;
+    height: 280px !important; /* Map အမြင့်ကို ဖုန်းအတွက် သင့်တော်အောင် ညှိခြင်း */
+    border-radius: 12px !important;
+  }
+
+}
+
 
 
 
