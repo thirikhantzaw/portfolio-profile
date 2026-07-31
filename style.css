@@ -852,6 +852,51 @@ body {
 
 }
 
+@media (max-width: 768px) {
+
+  /* Contact Info Container ကို ၁ ကွက်တည်း အောက်ဆင်းစေရန် */
+  .contact-info {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    width: 100% !important;
+  }
+
+  /* Location, Email, Phone, Skype ကဒ်တစ်ခုစီကို Full Width ပြုလုပ်ခြင်း */
+  .contact-card {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    padding: 16px 20px !important;
+    background-color: var(--card-bg, #f8f9fa) !important;
+    border-radius: 12px !important;
+  }
+
+  /* Icon Size & Alignment ညှိခြင်း */
+  .contact-icon {
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px !important; /* Icon မပြားသွားစေရန် */
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* စာသားများ ညီညာစေရန် */
+  .card-details h4 {
+    font-size: 0.95rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .card-details p {
+    font-size: 0.85rem !important;
+    word-break: break-word !important; /* စာသားမထွက်သွားစေရန် */
+  }
+
+}
+
 
 
 
