@@ -4,489 +4,645 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="icon" href="image/main_photo.jpg" type="image/jpg" sizes="32*32">
-    <!-- FontAwesome Icons CDN -->
+
+    <title>Thiri Khant Zaw | Portfolio</title>
+    <meta name="description"
+        content="Personal portfolio of Thiri Khant Zaw, a freelance web designer, developer and video editor.">
+
+    <link rel="icon" href="image/main_photo.jpg" type="image/jpeg">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Left Sidebar Navigation -->
+    <!-- SIDEBAR -->
     <nav class="sidebar">
-        <div class="logo">
-            <div class="logo-circle">M</div>
+        <!-- <a href="#home" class="logo" aria-label="Go to home">
+            <div class="logo-circle">T</div>
+        </a> -->
+
+        <div class="sidebar-profile">
+            <img src="image/main_photo.jpg" alt="Thiri Khant Zaw">
+            <h3>Thiri Khant Zaw</h3>
+            <p>Freelancer</p>
         </div>
+
         <ul class="nav-links">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+            <li><a href="#resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
+            <li><a href="#services"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+            <li><a href="#portfolio"><i class="fa-solid fa-images"></i> Portfolio</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
         </ul>
-        <div class="theme-toggle" id="theme-toggle">
-            <i class="fa-regular fa-moon" id="theme-icon"></i>
-        </div>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+            <i id="theme-icon" class="fa-solid fa-moon"></i>
+            <span id="theme-label">Dark Mode</span>
+        </button>
+
+        <p class="sidebar-footer">© 2026 Thiri Khant Zaw</p>
     </nav>
 
-    <!-- Main Content Wrapper -->
+    <!-- MAIN CONTENT -->
     <main class="main-content">
 
-        <!-- ==================== 1. HERO SECTION ==================== -->
+        <!-- HOME -->
         <section id="home" class="hero-section">
             <div class="hero-container">
-
-                <!-- Text Content -->
                 <div class="hero-text">
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-solid fa-globe"></i></a>
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
-                    </div>
 
-                    <p class="greeting">Hi There,</p>
-                    <h1 class="title">I Am a <span id="typewriter" class="highlight">Designer</span></h1>
-                    <p class="description">
-                        Every brand has a story. I build the bespoke portfolios, dynamic videos, and stunning websites
-                        that tell yours beautifully.
+                    <p class="eyebrow">
+                        <span class="status-dot"></span>
+                        Available for employment
                     </p>
 
-                    <a href="#about" class="btn-primary">
-                        <i class="fa-regular fa-user"></i> More About Me
-                    </a>
+                    <p class="greeting">Hello, I'm</p>
+
+                    <h1>Thiri Khant Zaw</h1>
+
+                    <h2 class="profession">
+                        I'm a <span id="typewriter">Web Designer</span>
+                    </h2>
+
+                    <p class="description">
+                        I create professional websites, creative digital experiences
+                        and engaging videos to help businesses build their online presence.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn-primary">
+                            <i class="fa-solid fa-eye"></i> View My Work
+                        </a>
+
+                        <a href="#contact" class="btn-secondary">
+                            <i class="fa-regular fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+
+                    <div class="social-icons">
+                        <!-- Replace # with your real profile links -->
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" aria-label="Website"><i class="fa-solid fa-globe"></i></a>
+                    </div>
 
                     <div class="hero-contact-info">
                         <div class="info-item">
-                            <strong>Email:</strong>
-                            <p>thirikhantzaw2000@gmail.com</p>
+                            <i class="fa-regular fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>thirikhantzaw2000@gmail.com</p>
+                            </div>
                         </div>
+
                         <div class="info-item">
-                            <strong>Phone:</strong>
-                            <p>+959 796 572 778</p>
-                        </div>
-                        <div class="info-item">
-                            <strong>Location:</strong>
-                            <p>Yangon, Myanmar</p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <p>Yangon, Myanmar</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Image Content -->
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Workspace">
+                    <div class="image-decoration"></div>
+                    <img src="image/main_photo.jpg" alt="Thiri Khant Zaw portrait">
+                    <div class="floating-card">
+                        <i class="fa-solid fa-code"></i>
+                        <div>
+                            <strong>Creative Developer</strong>
+                            <p>Designing digital ideas</p>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- ==================== 2. ABOUT SECTION ==================== -->
-        <section id="about" class="about-section">
-
-            <!-- Section Title -->
+        <!-- ABOUT -->
+        <section id="about" class="section about-section">
             <div class="section-title">
-                <h2><span class="title-icon"></span>About Me</h2>
-                <p>Main Information About Me And What I Love To Do.</p>
+                <span class="section-label">GET TO KNOW ME</span>
+                <h2>About <span>Me</span></h2>
+                <p>A little information about me and what I love to do.</p>
             </div>
 
-            <!-- About Details Card -->
             <div class="about-container">
                 <div class="about-img">
-                    <img src="image/main_photo.jpg" alt="Mariam Wallas">
+                    <img src="image/main_photo.jpg" alt="Thiri Khant Zaw">
                 </div>
 
                 <div class="about-info">
-                    <h3>Hello,</h3>
-                    <h2>I'm Thiri Khant Zaw, Based in Yangon</h2>
+                    <h3>I'm Thiri Khant Zaw</h3>
+                    <h4>Web Designer, Developer & Video Editor</h4>
 
                     <p class="bio-text">
-                        Your brand deserves more than just blending in. I build unapologetically bold digital
-                        identities. By combining razor-sharp web design, rhythmic video editing, and bespoke portfolios,
-                        I turn complex technical details into a visual experience that demands attention and refuses to
-                        be ignored.
+                        I am a freelancer who creates websites for businesses.
+                        I enjoy turning ideas into attractive, user-friendly
+                        digital experiences. I also create video content and
+                        continue to improve my web development and digital skills.
+                    </p>
+
+                    <p class="bio-text">
+                        My goal is to help businesses present their services
+                        professionally and connect with more customers online.
                     </p>
 
                     <div class="info-grid">
-                        <div class="grid-item"><span class="label">Phone :</span> <span class="val">+959 796 572
-                                778</span>
-                        </div>
                         <div class="grid-item">
-                            <span class="label">Email :</span>
+                            <span class="label">Name</span>
+                            <span class="val">Thiri Khant Zaw</span>
+                        </div>
+
+                        <div class="grid-item">
+                            <span class="label">Email</span>
                             <span class="val">thirikhantzaw2000@gmail.com</span>
                         </div>
+
                         <div class="grid-item">
-                            <span class="label">
-                                Freelancer :
-                            </span>
-                            <span class="val status-green">Available</span>
+                            <span class="label">Location</span>
+                            <span class="val">Yangon, Myanmar</span>
+                        </div>
+
+                        <div class="grid-item">
+                            <span class="label">Next Challenge</span>
+                            <span class="val status-green">Ready</span>
                         </div>
                     </div>
 
-                    <a href="#" class="btn-primary">
-                        <i class="fa-solid fa-cloud-arrow-down"></i> Download My CV
+                    <a href="#contact" class="btn-primary">
+                        <i class="fa-regular fa-paper-plane"></i> Contact Me
                     </a>
                 </div>
             </div>
-
         </section>
 
-        <!-- ==================== 3.Experience & Education Section ==================== -->
-        <section id="resume" class="resume-section">
+        <!-- RESUME -->
+        <section id="resume" class="section resume-section">
+            <div class="section-title">
+                <span class="section-label">MY BACKGROUND</span>
+                <h2>Experience & <span>Education</span></h2>
+                <p>My professional journey and learning experience.</p>
+            </div>
+
             <div class="resume-container">
-
                 <div class="resume-box">
-                    <h3 class="resume-title">Experience</h3>
+                    <h3 class="resume-title">
+                        <i class="fa-solid fa-briefcase"></i> Experience
+                    </h3>
+
                     <div class="timeline-list">
-                        <div class="timeline-item">
-                            <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
+                        <article class="timeline-item">
+                            <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <h4>Web Designer</h4>
-                                <p class="company">Spotify • Full time</p>
-                                <p class="duration">May 2025 - Present</p>
+                                <span class="duration">2025 – Present</span>
+                                <h4>Freelance Web Designer</h4>
+                                <p class="company">Independent Projects</p>
+                                <p>Creating and customizing business websites and portfolio layouts.</p>
                             </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-dot"></div>
                             <div class="timeline-content">
+                                <span class="duration">2022 – 2024</span>
                                 <h4>Office Staff</h4>
-                                <p class="company">Spotify • Full time</p>
-                                <p class="duration">July 2022 - Nov 2024</p>
+                                <p class="company">Previous Employment</p>
+                                <p>Office administration and day-to-day professional responsibilities.</p>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
 
                 <div class="resume-box">
-                    <h3 class="resume-title">Education</h3>
+                    <h3 class="resume-title">
+                        <i class="fa-solid fa-graduation-cap"></i> Education
+                    </h3>
+
                     <div class="timeline-list">
-                        <div class="timeline-item">
-                            <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <article class="timeline-item">
+                            <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <h4>Engineering Degree</h4>
-                                <p class="company">Paris University • Full time</p>
-                                <p class="duration">Jun 2019 - Present • 4 years 9 mos</p>
+                                <span class="duration">Present</span>
+                                <h4>University Studies</h4>
+                                <p class="company">University of the People</p>
+                                <p>Developing academic knowledge and communication skills.</p>
                             </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <h4>Master Degree</h4>
-                                <p class="company">Paris University • Full time</p>
-                                <p class="duration">Jun 2019 - Present • 4 years 9 mos</p>
+                                <span class="duration">Ongoing Learning</span>
+                                <h4>Web Development</h4>
+                                <p class="company">Independent Learning</p>
+                                <p>Practicing HTML, CSS, JavaScript and website deployment.</p>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- ==================== 4.Service ==================== -->
-        <section id="services" class="services-section">
-
+        <!-- SERVICES -->
+        <section id="services" class="section services-section">
             <div class="section-title">
-                <h2><span class="title-icon"></span>My Services</h2>
-                <p>Services I Provide For My Clients.</p>
+                <span class="section-label">WHAT I DO</span>
+                <h2>My <span>Services</span></h2>
+                <p>Creative solutions for individuals and businesses.</p>
             </div>
 
             <div class="services-container">
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
                     <h3>Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                        mattis, pulvinar dapibus leo.</p>
-                </div>
+                    <p>Responsive business websites and personal portfolio websites.</p>
+                </article>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-crop-simple"></i>
-                    </div>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
                     <h3>UI/UX Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                        mattis, pulvinar dapibus leo.</p>
-                </div>
+                    <p>Clean layouts and user-friendly website experiences.</p>
+                </article>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                    </div>
-                    <h3>App Development</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                        mattis, pulvinar dapibus leo.</p>
-                </div>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+                    <h3>Business Websites</h3>
+                    <p>Professional online pages to showcase business services and products.</p>
+                </article>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-bullhorn"></i>
-                    </div>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
                     <h3>Digital Marketing</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                        mattis, pulvinar dapibus leo.</p>
-                </div>
+                    <p>Creative content ideas to support business visibility online.</p>
+                </article>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-pen-nib"></i>
-                    </div>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
                     <h3>Graphic Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                        mattis, pulvinar dapibus leo.</p>
-                </div>
+                    <p>Simple promotional graphics and visual content for brands.</p>
+                </article>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-video"></i>
-                    </div>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-video"></i></div>
                     <h3>Video Editing</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-                        mattis, pulvinar dapibus leo.</p>
-                </div>
-
+                    <p>Short-form videos and engaging social media content.</p>
+                </article>
             </div>
-
         </section>
 
-        <!-- ==================== 5.Portfolio ==================== -->
-        <section id="portfolio" class="portfolio-section">
-
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="section portfolio-section">
             <div class="section-title">
-                <h2><span class="title-icon"></span>My Portfolio</h2>
-                <p>Some Of My Recent Works.</p>
+                <span class="section-label">MY RECENT WORK</span>
+                <h2>My <span>Portfolio</span></h2>
+                <p>A selection of projects and creative concepts.</p>
             </div>
 
             <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">ALL</button>
-                <button class="filter-btn" data-filter="web-design">WEB DESIGN</button>
-                <button class="filter-btn" data-filter="web-dev">WEB DEVELOPMENT</button>
-                <button class="filter-btn" data-filter="graphic">GRAPHIC DESIGN</button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web-design">Web Design</button>
+                <button class="filter-btn" data-filter="web-dev">Web Development</button>
+                <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+                <button class="filter-btn" data-filter="video">Video Editing</button>
             </div>
 
             <div class="portfolio-container">
-
-                <div class="portfolio-card web-design">
+                <article class="portfolio-card web-design">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8"
-                            alt="Web Design Project">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=80"
+                            alt="Website design concept" loading="lazy">
                         <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <span class="category">Web Design</span>
-                                <h4>E-Commerce Website</h4>
-                                <a href="#" class="view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                            <span class="category">Web Design</span>
+                            <h3>Business Website</h3>
+                            <p>Website layout concept</p>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-card web-dev">
+                <article class="portfolio-card web-dev">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Web Dev Project">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80"
+                            alt="Code on a computer screen" loading="lazy">
                         <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <span class="category">Web Development</span>
-                                <h4>Dashboard Web App</h4>
-                                <a href="#" class="view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                            <span class="category">Web Development</span>
+                            <h3>Web Development</h3>
+                            <p>Development practice project</p>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-card graphic">
+                <article class="portfolio-card graphic">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d" alt="Graphic Project">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=900&q=80"
+                            alt="Graphic design concept" loading="lazy">
                         <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <span class="category">Graphic Design</span>
-                                <h4>Brand Identity Design</h4>
-                                <a href="#" class="view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                            <span class="category">Graphic Design</span>
+                            <h3>Brand Visuals</h3>
+                            <p>Creative design concept</p>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-card web-dev">
+                <article class="portfolio-card web-dev">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Analytics Project">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+                            alt="Website analytics dashboard" loading="lazy">
                         <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <span class="category">Web Development</span>
-                                <h4>SEO & Analytics Platform</h4>
-                                <a href="#" class="view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                            <span class="category">Web Development</span>
+                            <h3>Analytics Dashboard</h3>
+                            <p>Dashboard design concept</p>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-card web-design">
+                <article class="portfolio-card web-design">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d" alt="Mobile UI">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=900&q=80"
+                            alt="Responsive web interface" loading="lazy">
                         <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <span class="category">Web Design</span>
-                                <h4>Mobile Banking UI</h4>
-                                <a href="#" class="view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                            <span class="category">Web Design</span>
+                            <h3>Responsive Website</h3>
+                            <p>Mobile-friendly design concept</p>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="portfolio-card graphic">
+                <article class="portfolio-card video">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5" alt="Poster Project">
+                        <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=900&q=80"
+                            alt="Video production equipment" loading="lazy">
                         <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <span class="category">Graphic Design</span>
-                                <h4>Creative Poster Mockup</h4>
-                                <a href="#" class="view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                            <span class="category">Video Editing</span>
+                            <h3>Video Content</h3>
+                            <p>Video production concept</p>
                         </div>
                     </div>
-                </div>
-
+                </article>
             </div>
-
         </section>
 
-        <!-- ==================== 6.Contact ==================== -->
-        <section id="contact" class="contact-section">
-
+        <!-- CONTACT -->
+        <section id="contact" class="section contact-section">
             <div class="section-title">
-                <h2><span class="title-icon"></span>Contact Me</h2>
-                <p>Let's Get In Touch.</p>
+                <span class="section-label">LET'S CONNECT</span>
+                <h2>Contact <span>Me</span></h2>
+                <p>Have a project in mind? Let's discuss your ideas.</p>
             </div>
 
             <div class="contact-container">
-
                 <div class="contact-info">
-
                     <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div class="card-details">
-                            <h4>Location</h4>
-                            <p>1000 Proctor St, USA</p>
+                        <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:thirikhantzaw2000@gmail.com">
+                                thirikhantzaw2000@gmail.com
+                            </a>
                         </div>
                     </div>
 
                     <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-regular fa-envelope"></i>
-                        </div>
-                        <div class="card-details">
-                            <h4>Email</h4>
-                            <p>contact@mariam.com</p>
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h3>Phone</h3>
+                            <a href="tel:+959796572778">+959 796 572 778</a>
                         </div>
                     </div>
 
                     <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="card-details">
-                            <h4>Phone</h4>
-                            <p>+113-804-9098</p>
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Yangon, Myanmar</p>
                         </div>
                     </div>
 
                     <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-brands fa-skype"></i>
-                        </div>
-                        <div class="card-details">
-                            <h4>Skype</h4>
-                            <p>mariam.wallas</p>
+                        <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                        <div>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/thirikhantzaw" target="_blank" rel="noopener noreferrer">
+                                View my GitHub
+                            </a>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="contact-form-box">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488797.9785801885!2d95.85189554369116!3d16.839536845719444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2sYangon!5e0!3m2!1sen!2smm!4v1785389334342!5m2!1sen!2smm"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin">
-                    </iframe>
-                    <div>
-                        <a method="POST" class="btn btn-primary" href="https://msng.link/o?+959404631463=vi"
-                            target="_blank">
-                            Send Message
-                        </a>
-                    </div>
+                    <h3>Send Me a Message</h3>
+
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project or service" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary">
+                            <i class="fa-regular fa-paper-plane"></i> Send Message
+                        </button>
+
+                        <p id="form-status" class="form-status" aria-live="polite"></p>
+                    </form>
                 </div>
-
             </div>
-
         </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>Designed with <i class="fa-solid fa-heart"></i> by Thiri Khant Zaw</p>
+            <p>© <span id="current-year">2026</span> All rights reserved.</p>
+            <a href="#home" class="back-to-top" aria-label="Back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </footer>
 
     </main>
 
-
-
-
-
-
-
-
-
-
-
-    <!-- JavaScript for Typewriter Effect -->
+    <!-- JAVASCRIPT -->
     <script>
+        // LIGHT AND DARK THEME
+        const themeToggleBtn = document.getElementById("theme-toggle");
+        const themeIcon = document.getElementById("theme-icon");
+        const themeLabel = document.getElementById("theme-label");
 
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
+        function applyTheme(theme) {
+            const isDark = theme === "dark";
 
-        themeToggleBtn.addEventListener('click', () => {
-            // Body ထဲမှာ dark-mode class ကို Toggle လုပ်ခြင်း
-            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle("dark-mode", isDark);
+            themeIcon.className = isDark
+                ? "fa-solid fa-sun"
+                : "fa-solid fa-moon";
 
-            // Dark Mode ရောက်သွားရင် Sun Icon ပြောင်းမည်၊ မဟုတ်ရင် Moon Icon ထားမည်
-            if (document.body.classList.contains('dark-mode')) {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
+            themeLabel.textContent = isDark ? "Light Mode" : "Dark Mode";
+
+            themeToggleBtn.setAttribute(
+                "aria-label",
+                isDark ? "Switch to light mode" : "Switch to dark mode"
+            );
+        }
+
+        let savedTheme = "light";
+
+        try {
+            savedTheme = localStorage.getItem("portfolio-theme") || "light";
+        } catch (error) {
+            savedTheme = "light";
+        }
+
+        applyTheme(savedTheme === "dark" ? "dark" : "light");
+
+        themeToggleBtn.addEventListener("click", function () {
+            const newTheme = document.body.classList.contains("dark-mode")
+                ? "light"
+                : "dark";
+
+            applyTheme(newTheme);
+
+            try {
+                localStorage.setItem("portfolio-theme", newTheme);
+            } catch (error) {
+                // Theme switching still works without local storage.
             }
         });
-
+        
+        // TYPEWRITER EFFECT
         const textElement = document.getElementById("typewriter");
-        const words = ["Designer", "Developer", "Video Editor"];
+        const words = [
+            "Web Designer",
+            "Web Developer",
+            "Video Editor"
+        ];
+
         let wordIndex = 0;
-        let charIndex = 0;
+        let charIndex = words[0].length;
         let isDeleting = false;
 
         function typeEffect() {
             const currentWord = words[wordIndex];
 
             if (isDeleting) {
-                textElement.textContent = currentWord.substring(0, charIndex - 1);
                 charIndex--;
             } else {
-                textElement.textContent = currentWord.substring(0, charIndex + 1);
                 charIndex++;
             }
 
-            let typeSpeed = isDeleting ? 80 : 120;
+            textElement.textContent = currentWord.substring(0, charIndex);
+
+            let speed = isDeleting ? 60 : 100;
 
             if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 2000;
                 isDeleting = true;
+                speed = 1600;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 wordIndex = (wordIndex + 1) % words.length;
-                typeSpeed = 400;
+                speed = 350;
             }
 
-            setTimeout(typeEffect, typeSpeed);
+            setTimeout(typeEffect, speed);
         }
 
-        document.addEventListener("DOMContentLoaded", typeEffect);
+        setTimeout(typeEffect, 1800);
+
+        // PORTFOLIO FILTER
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+        filterButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const filter = button.dataset.filter;
+
+                filterButtons.forEach(function (item) {
+                    item.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                portfolioCards.forEach(function (card) {
+                    const shouldShow =
+                        filter === "all" || card.classList.contains(filter);
+
+                    card.classList.toggle("hidden", !shouldShow);
+                });
+            });
+        });
+
+        // ACTIVE NAVIGATION
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.forEach(function (item) {
+                    item.classList.remove("active");
+                });
+
+                link.classList.add("active");
+            });
+        });
+
+        // CURRENT YEAR
+        document.getElementById("current-year").textContent =
+            new Date().getFullYear();
+
+        // CONTACT FORM
+        // This opens the visitor's email application.
+        // It does not send a message automatically.
+        const contactForm = document.getElementById("contact-form");
+        const formStatus = document.getElementById("form-status");
+
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (!name || !email || !subject || !message) {
+                formStatus.textContent = "Please complete all fields.";
+                return;
+            }
+
+            const recipient = "thirikhantzaw2000@gmail.com";
+            const emailSubject = encodeURIComponent(subject);
+            const emailBody = encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" + message
+            );
+
+            formStatus.textContent =
+                "Opening your email application. Please send the prepared message.";
+
+            window.location.href =
+                "mailto:" + recipient +
+                "?subject=" + emailSubject +
+                "&body=" + emailBody;
+        });
     </script>
+
 </body>
 
 </html>
