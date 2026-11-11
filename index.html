@@ -142,10 +142,10 @@
                     <h4>Web Designer, Developer & Video Editor</h4>
 
                     <p class="bio-text">
-                        I am a freelancer who creates websites for businesses.
-                        I enjoy turning ideas into attractive, user-friendly
-                        digital experiences. I also create video content and
-                        continue to improve my web development and digital skills.
+                        As a Web Developer at ELCID Ptd. Ltd., I create websites for businesses, turning ideas into
+                        attractive, user-friendly digital experiences. I also create video content and continuously
+                        improve my web development and digital skills. My goal is to help our clients present their
+                        services professionally and connect with more customers online.
                     </p>
 
                     <p class="bio-text">
@@ -201,8 +201,8 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <span class="duration">2025 – Present</span>
-                                <h4>Freelance Web Designer</h4>
-                                <p class="company">Independent Projects</p>
+                                <h4>Web Designer</h4>
+                                <p class="company">Projects at ELCID Ptd. Ltd.</p>
                                 <p>Creating and customizing business websites and portfolio layouts.</p>
                             </div>
                         </article>
@@ -437,6 +437,7 @@
                 <div class="contact-form-box">
                     <h3>Send Me a Message</h3>
 
+
                     <form id="contact-form">
                         <div class="form-group">
                             <label for="name">Your Name</label>
@@ -446,6 +447,12 @@
                         <div class="form-group">
                             <label for="email">Your Email</label>
                             <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                                autocomplete="tel" required>
                         </div>
 
                         <div class="form-group">
@@ -459,12 +466,15 @@
                                 required></textarea>
                         </div>
 
-                        <button type="submit" class="btn-primary">
-                            <i class="fa-regular fa-paper-plane"></i> Send Message
+                        <button type="submit" id="submit-btn" class="btn-primary">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            Send Message
                         </button>
 
                         <p id="form-status" class="form-status" aria-live="polite"></p>
                     </form>
+
+
                 </div>
             </div>
         </section>
@@ -526,7 +536,7 @@
                 // Theme switching still works without local storage.
             }
         });
-        
+
         // TYPEWRITER EFFECT
         const textElement = document.getElementById("typewriter");
         const words = [
@@ -606,41 +616,93 @@
         document.getElementById("current-year").textContent =
             new Date().getFullYear();
 
-        // CONTACT FORM
-        // This opens the visitor's email application.
-        // It does not send a message automatically.
-        const contactForm = document.getElementById("contact-form");
-        const formStatus = document.getElementById("form-status");
+        // // CONTACT FORM
+        // // This opens the visitor's email application.
+        // // It does not send a message automatically.
+        // const contactForm = document.getElementById("contact-form");
+        // const formStatus = document.getElementById("form-status");
 
-        contactForm.addEventListener("submit", function (event) {
+        // contactForm.addEventListener("submit", function (event) {
+        //     event.preventDefault();
+
+        //     const name = document.getElementById("name").value.trim();
+        //     const email = document.getElementById("email").value.trim();
+        //     const subject = document.getElementById("subject").value.trim();
+        //     const message = document.getElementById("message").value.trim();
+
+        //     if (!name || !email || !subject || !message) {
+        //         formStatus.textContent = "Please complete all fields.";
+        //         return;
+        //     }
+
+        //     const recipient = "thirikhantzaw2000@gmail.com";
+        //     const emailSubject = encodeURIComponent(subject);
+        //     const emailBody = encodeURIComponent(
+        //         "Name: " + name +
+        //         "\nEmail: " + email +
+        //         "\n\nMessage:\n" + message
+        //     );
+
+        //     formStatus.textContent =
+        //         "Opening your email application. Please send the prepared message.";
+
+        //     window.location.href =
+        //         "mailto:" + recipient +
+        //         "?subject=" + emailSubject +
+        //         "&body=" + emailBody;
+        // });
+
+
+        const scriptURL = "https://script.google.com/macros/s/AKfycbyiC-SE0C0QTqpI43yIs7Y2b7IwMAAD35p8Eje97s9mDXPyrn4EWJWbEOGWoPSLVA5CIQ/exec";
+
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+        const submitBtn = document.getElementById("submit-btn");
+
+        form.addEventListener("submit", async function (event) {
             event.preventDefault();
 
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const subject = document.getElementById("subject").value.trim();
-            const message = document.getElementById("message").value.trim();
+            if (submitBtn.disabled) return;
 
-            if (!name || !email || !subject || !message) {
-                formStatus.textContent = "Please complete all fields.";
-                return;
+            submitBtn.disabled = true;
+            status.textContent = "Sending message...";
+
+            const formData = new FormData(form);
+
+            const data = {
+                name: formData.get("name").trim(),
+                email: formData.get("email").trim(),
+                phone: formData.get("phone").trim(),
+                subject: formData.get("subject").trim(),
+                message: formData.get("message").trim()
+            };
+
+            try {
+                await fetch(scriptURL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: {
+                        "Content-Type": "text/plain;charset=utf-8"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                status.textContent =
+                    "Your message has been submitted. Thank you!";
+
+                form.reset();
+
+            } catch (error) {
+                status.textContent =
+                    "Unable to send. Please try again.";
+
+                console.error("Form submission error:", error);
+
+            } finally {
+                submitBtn.disabled = false;
             }
-
-            const recipient = "thirikhantzaw2000@gmail.com";
-            const emailSubject = encodeURIComponent(subject);
-            const emailBody = encodeURIComponent(
-                "Name: " + name +
-                "\nEmail: " + email +
-                "\n\nMessage:\n" + message
-            );
-
-            formStatus.textContent =
-                "Opening your email application. Please send the prepared message.";
-
-            window.location.href =
-                "mailto:" + recipient +
-                "?subject=" + emailSubject +
-                "&body=" + emailBody;
         });
+
     </script>
 
 </body>
